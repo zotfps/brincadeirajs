@@ -7,7 +7,7 @@ function verificarBotao(){
     setTimeout(() => {
         if (Tamanho < 12) {
             resultado.innerHTML = "Pênis pequeno";
-        } else if (Tamanho >= 12 && Tamanho < 18) {
+        } else if (Tamanho >= 12 && Tamanho < 16) {
             resultado.innerHTML = "Pênis médio";
         } else {
             resultado.innerHTML = "Pênis grande";
