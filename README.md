@@ -1,0 +1,1 @@
+Este é um projeto que eu fiz enquanto estou aprendendo JavaScript. Estou no começo, mas estou praticando bastante e tentando melhorar minha lógica de programação e meu entendimento de como a linguagem funciona.
