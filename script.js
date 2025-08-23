@@ -4,17 +4,22 @@ document.querySelector(".botaoMedir button").addEventListener("click", verificar
 function verificarBotao() {
     let Tamanho;
     do {
-        Tamanho = Number(window.prompt("Digite o tamanho do seu pênis em cm:"));
+        Tamanho = window.prompt("Digite sua altura em cm:");
+        Tamanho = Number(Tamanho.replace(",", "."));
+        if (Tamanho > 100) {
+            Tamanho = Tamanho / 10;
+        }
+
     } while (isNaN(Tamanho) || Tamanho <= 0);
 
-    resultado.innerHTML = "Medindo o pênis...";
+    resultado.innerHTML = "Medindo a altura...";
     setTimeout(() => {
-        if (Tamanho < 12) {
-            resultado.innerHTML = "Pênis pequeno";
-        } else if (Tamanho >= 12 && Tamanho < 16) {
-            resultado.innerHTML = "Pênis médio";
+        if (Tamanho < 1.60) {
+            resultado.innerHTML = `${Tamanho.toFixed(2)} m → Altura baixa`;
+        } else if (Tamanho >= 1.60 && Tamanho < 1.80) {
+            resultado.innerHTML = `${Tamanho.toFixed(2)} m → Altura média`;
         } else {
-            resultado.innerHTML = "Pênis grande";
+            resultado.innerHTML = `${Tamanho.toFixed(2)} m → Altura alta`;
         }
     }, 1000);
 }
